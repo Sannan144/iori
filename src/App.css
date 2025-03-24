@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'regFont';
+    src: url('/fonts/Roslindale-DisplayCondensedRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'lightFont';
+    src: url('/fonts/Roslindale-DisplayCondensedLight.woff2') format('woff2');
+    font-weight: lighter;
+    font-style: normal;
+  }
+
+  body{
+    overflow-x:hidden;
+  }
+
+  .text{
+    display: inline-block;
+    opacity:0;
+    transform: rotateY(80deg);
+  }
+  
+  
