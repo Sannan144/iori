@@ -2,7 +2,6 @@ import { gsap } from 'gsap';
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
-import { useEffect } from 'react'
 
 const ImgMove = () => {
   const imageArray = [
@@ -59,13 +58,8 @@ const ImgMove = () => {
     })
   })
 
-  window.addEventListener("load", () => {
-    ScrollTrigger.refresh(); // Refresh ScrollTrigger positions on load
-  });
-  
-
   return (
-    <div className='w-full py-5 px-10 bg-[#C2C0B5]'>
+    <div className='w-full py-5 px-10 bg-[#C2C0B5] relative z-20'>
       {imageArray.map((item, index) => {
         return (
           <div
@@ -73,7 +67,7 @@ const ImgMove = () => {
             onMouseMove={moving}
             onMouseLeave={leave}
             style={{ borderBottom: index === imageArray.length - 1 && '2px solid black' }}
-            className='imgMove w-full cursor-pointer border-t-2 flex justify-between items-center relative'
+            className='imgMove w-full cursor-pointer border-t-2 flex justify-between items-center relative z-10'
           >
             <h1 style={{ pointerEvents: 'none' }} className='text-[clamp(50px,10vw,150px)] font-[regFont] tracking-tighter leading-none py-10'>
               {item.randomWord}
@@ -81,7 +75,7 @@ const ImgMove = () => {
             <p className='font-[Inter] font-semibold'>2025</p>
             <img
               style={{pointerEvents: 'none' }}
-              className='w-[30vw] h-[30vw] object-cover absolute left-0 top-0 z-10 events-none rounded-lg opacity-0 transition-all duration-[0.03]'
+              className='w-[30vw] h-[30vw] object-cover absolute left-0 top-0 z-20 events-none rounded-lg opacity-0 transition-all duration-[0.03]'
               src={item.url}
               alt={item.randomWord} 
             />

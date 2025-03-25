@@ -19,13 +19,8 @@ const HorizontalScroll = () => {
         })
     })
 
-    window.addEventListener("load", () => {
-      ScrollTrigger.refresh(); // Refresh ScrollTrigger positions on load
-    });
-
-    
   return (
-    <div className='w-full h-fit hs bg-[#C2C0B5]'>
+    <div className='w-full h-fit hs bg-[#C2C0B5] overflow-hidden'>
         <h1 style={{whiteSpace:'nowrap'}} className='font-[lightFont] text-[40vw] uppercase leading-none'>Timeless Elegance</h1>
     </div>
   )

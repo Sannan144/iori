@@ -48,31 +48,27 @@ const wrapInSpan = (text) => {
           }
         })
     })
-
-    window.addEventListener("load", () => {
-      ScrollTrigger.refresh(); // Refresh ScrollTrigger positions on load
-    });
     
 
   return (
-    <div className="w-full h-auto bg-[#C2C0B5] px-10 flex flex-col lg:flex-row pt-20 gap-20 lg:gap-0">
+    <div className="w-full h-auto bg-[#C2C0B5] px-10 flex flex-col lg:flex-row py-20 gap-20 lg:gap-0">
 
       <div className="w-full lg:w-[35%] flex justify-center">
         <div className="w-[320px] h-[420px] sm:w-[350px] sm:h-[450px] relative z-10">
           <img className="w-full h-full object-cover rounded-xl" src={img1} />
-          <img className="w-32 h-48 object-cover rounded-xl absolute right-[-64px] bottom-10" src={img2} ref={smImg}/>
+          <img className="w-20 h-40 sm:w-32 sm:h-48 object-cover rounded-xl absolute right-[-20px] sm:right-[-64px] bottom-10" src={img2} ref={smImg}/>
         </div>
       </div>
 
       <div className="AboutContent w-full lg:w-[65%]">
-        <h1 className="leading-none mb-1 text-[clamp(60px,8vw,100px)] font-semibold font-[lightFont] text-center sm:text-left lg:text-center">
+        <h1 className="leading-none mb-1 text-[clamp(45px,8vw,100px)] font-semibold font-[lightFont] text-center sm:text-left lg:text-center">
           {wrapInSpan('IORI COSMETIC')}
         </h1>
-        <h1 className="leading-none mb-1 text-[clamp(60px,8vw,100px)] font-semibold font-[lightFont] text-center sm:text-left lg:text-center">
+        <h1 className="leading-none mb-1 text-[clamp(45px,8vw,100px)] font-semibold font-[lightFont] text-center sm:text-left lg:text-center">
           {wrapInSpan('BRAND')}
         </h1>
         <p className="w-full lg:w-[80%] mx-auto font-[Inter] mt-5 mb-3 text-sm md:text-lg opacity-0">Welcome to IORI, where beauty meets luxury. Discover premium skincare and makeup products designed to enhance your natural glow. Experience elegance, quality, and innovation with IORI’s exclusive cosmetic collection.</p>
-        <button class="cursor-pointer font-semibold overflow-hidden relative z-100 border group px-8 py-2 ml-20 opacity-0">
+        <button class="cursor-pointer font-semibold overflow-hidden relative z-100 border group px-8 py-2 ml-0 md:ml-20 opacity-0">
           <span class="relative z-10 text-black group-hover:text-white text-xl duration-500">Read More</span>
           <span class="absolute w-full h-full bg-black -left-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:left-0 duration-500"></span>
           <span class="absolute w-full h-full bg-black -right-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:right-0 duration-500"></span>
